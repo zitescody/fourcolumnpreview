@@ -1,0 +1,186 @@
+/*Universal Styles*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    /*colors*/
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --verydarkblue: hsl(234, 12%, 34%);
+    --verydarkbluetransparent: hsla(234, 12%, 34%, 0.5);
+    --grayishblue: hsl(229, 6%, 66%);
+    --verylightgray: hsl(0, 0%, 98%);
+
+    /*fonts*/
+    --poppins: 'Poppins', sans-serif;
+    --poppinsLight: 200;
+    --poppinsMedium: 400;
+    --PoppinsHeavy: 600;
+}
+
+/*Layout Styles*/
+body {
+    margin: 0;
+    font-family: var(--poppins);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    min-height: 100vh;
+    background-color: var(--verylightgray);
+}
+
+main {
+    margin: 10%;
+}
+
+section {
+    margin-top: 20%;
+    display: grid;
+    grid-template-columns: [first] 100% [end];
+    grid-template-rows: repeat(4, 25% [row-start]);
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    ;
+    row-gap: 20px;
+}
+    .one {
+        grid-column-start: first;
+        grid-column-end: end;
+        grid-row-start: row-start;
+        grid-area: one;
+        border-top: 3px solid var(--cyan);
+    }
+
+    .two {
+        grid-column-start: first;
+        grid-column-end: end;
+        grid-row-start: row-start;
+        grid-area: two;
+        border-top: 3px solid var(--red);
+    }
+
+    .three {
+        grid-column-start: first;
+        grid-column-end: end;
+        grid-row-start: row-start;
+        grid-area: three;
+        border-top: 3px solid var(--orange);
+    }
+
+    .four {
+        grid-column-start: first;
+        grid-column-end: end;
+        grid-row-start: row-start;
+        grid-area: four;
+        border-top: 3px solid var(--blue);
+    }
+
+/*Content Styles*/
+.col {
+    background-color: white;
+    box-shadow: 0px 5px 5px 0px var(--verydarkbluetransparent);
+    border-radius: 10px;
+    padding: 5% 10% 5%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: var(--poppinsLight);
+    color: var(--grayishblue);
+}
+
+strong {
+    color: var(--verydarkblue);
+}
+
+h2 {
+    text-align: start;
+    font-size: 16pt;
+    font-weight: var(--PoppinsHeavy);
+    color: var(--verydarkblue);
+}
+
+p {
+    text-align: center;
+    font-size: 10pt;
+    font-weight: var(--poppinsMedium);
+    color: var(--grayishblue);
+}
+
+p.content-title {
+    font-size: 12pt;
+}
+
+p.content {
+    text-align: left;
+}
+
+img.img {
+    float: right;
+    margin-top: 5%;
+}
+
+/*Media Queries*/
+@media only screen and (min-width: 1020px) {
+    main {
+        margin: 5% 10% 5%;
+    }
+    section {
+        margin-top: 5%;
+        display: grid;
+        grid-template-columns: [first] 33% [second] 33% [third] 33% [end];
+        grid-template-rows: [first] 50% [second] 50% [end];
+        grid-template-areas: 
+        "one two four" 
+        "one three four"
+        ;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+        .one {
+            grid-column-start: first;
+            grid-column-end: end;
+            grid-row-start: row-start;
+            grid-area: one;
+            border-top: 3px solid var(--cyan);
+            align-self: center;
+        }
+    
+        .two {
+            grid-column-start: first;
+            grid-column-end: end;
+            grid-row-start: row-start;
+            grid-area: two;
+            border-top: 3px solid var(--red);
+        }
+    
+        .three {
+            grid-column-start: first;
+            grid-column-end: end;
+            grid-row-start: row-start;
+            grid-area: three;
+            border-top: 3px solid var(--orange);
+        }
+    
+        .four {
+            grid-column-start: first;
+            grid-column-end: end;
+            grid-row-start: row-start;
+            grid-area: four;
+            border-top: 3px solid var(--blue);
+            align-self: center;
+        }
+}
+
+/*Attribution Styles*/
+footer {
+    margin-top: 10%;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
