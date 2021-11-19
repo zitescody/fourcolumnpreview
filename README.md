@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/zitescody/fourcolumnpreview)
+- Live Site URL: [Live Site](https://zitescody.github.io/fourcolumnpreview/)
 
 ## My process
 
@@ -42,9 +42,6 @@ Users should be able to:
 ### What I learned
 
 I am learning how to code without referencing so many sources. Using CSS grid is becoming more natural but I am seeking to find ways to continue making the code simpler..
-
-```
-
 
 ### Continued development
 
